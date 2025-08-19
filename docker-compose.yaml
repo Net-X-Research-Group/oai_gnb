@@ -15,7 +15,7 @@ services:
             TZ: America/Chicago
             USE_ADDITIONAL_OPTIONS: --usrp-tx-thread-config 1 -E --continuous-tx
         volumes:
-            - ./gnb.sa.band78.fr1.106PRB.usrpx310_nu.conf:/opt/oai-gnb/etc/gnb.conf
+            - configs/band78.106PRB.x310_mimo.conf:/opt/oai-gnb/etc/gnb.conf
         healthcheck:
             test: /bin/bash -c "/opt/oai-gnb/bin/check-prach-io.sh"
             start_period: 15s
